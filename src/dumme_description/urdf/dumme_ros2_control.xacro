@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="dumme_ros2_control">
+        <xacro:property name="PI" value="3.14159265359"/>
+
+        <ros2_control name="RobotSystem" type="system">
+
+            <!-- ====================================================== -->
+            <!--                  Hardware Interface                    -->
+            <!-- ====================================================== -->
+
+            <!-- Gazebo Simulation -->
+            <xacro:if value="$(arg is_sim)">
+
+                <!-- ROS 2 Humble -->
+                <xacro:if value="$(arg is_ignition)">
+                    <hardware>
+                        <plugin>ign_ros2_control/IgnitionSystem</plugin>
+                    </hardware>
+                </xacro:if>
+
+                <!-- ROS 2 Iron / Jazzy -->
+                <xacro:unless value="$(arg is_ignition)">
+                    <hardware>
+                        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+                    </hardware>
+                </xacro:unless>
+
+            </xacro:if>
+
+            <!-- Real Robot -->
+            <xacro:unless value="$(arg is_sim)">
+
+                <hardware>
+                    <plugin>dumme_controller/DummeInterface</plugin>
+
+                    <!-- Change this later if required -->
+                    <param name="port">/dev/ttyUSB0</param>
+
+                </hardware>
+
+            </xacro:unless>
+
+            <!-- ====================================================== -->
+            <!--                     Joint 1                            -->
+            <!-- ====================================================== -->
+
+            <joint name="shoulder_rotation_plate_joint">
+
+                <command_interface name="position">
+                    <param name="min">-${PI}</param>
+                    <param name="max">${PI}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+
+            </joint>
+
+            <!-- ====================================================== -->
+            <!--                     Joint 2                            -->
+            <!-- ====================================================== -->
+
+            <joint name="shoulder_joint">
+
+                <command_interface name="position">
+                    <param name="min">-${PI}</param>
+                    <param name="max">${PI}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+
+            </joint>
+
+            <!-- ====================================================== -->
+            <!--                     Joint 3                            -->
+            <!-- ====================================================== -->
+
+            <joint name="elbow_joint">
+
+                <command_interface name="position">
+                    <param name="min">-${PI}</param>
+                    <param name="max">${PI}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+
+            </joint>
+
+            <!-- ====================================================== -->
+            <!--                     Joint 4                            -->
+            <!-- ====================================================== -->
+
+            <joint name="wrist_joint">
+
+                <command_interface name="position">
+                    <param name="min">-${PI}</param>
+                    <param name="max">${PI}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+
+            </joint>
+
+        </ros2_control>
+    </xacro:macro>
+</robot>

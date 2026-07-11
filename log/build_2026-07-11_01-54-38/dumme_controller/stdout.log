@@ -1,0 +1,30 @@
+running egg_info
+creating ../build/dumme_controller/dumme_controller.egg-info
+writing ../build/dumme_controller/dumme_controller.egg-info/PKG-INFO
+writing dependency_links to ../build/dumme_controller/dumme_controller.egg-info/dependency_links.txt
+writing requirements to ../build/dumme_controller/dumme_controller.egg-info/requires.txt
+writing top-level names to ../build/dumme_controller/dumme_controller.egg-info/top_level.txt
+writing manifest file '../build/dumme_controller/dumme_controller.egg-info/SOURCES.txt'
+reading manifest file '../build/dumme_controller/dumme_controller.egg-info/SOURCES.txt'
+writing manifest file '../build/dumme_controller/dumme_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/asambhav/Storage/dumme_sim/build/dumme_controller/build/lib/dumme_controller
+copying dumme_controller/__init__.py -> /home/asambhav/Storage/dumme_sim/build/dumme_controller/build/lib/dumme_controller
+running install
+running install_lib
+creating /home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/python3.10/site-packages/dumme_controller
+copying /home/asambhav/Storage/dumme_sim/build/dumme_controller/build/lib/dumme_controller/__init__.py -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/python3.10/site-packages/dumme_controller
+byte-compiling /home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/python3.10/site-packages/dumme_controller/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/ament_index/resource_index/packages
+copying resource/dumme_controller -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller
+creating /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller/launch
+copying launch/controller.launch.py -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller/launch
+creating /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller/config
+copying config/dumme_controllers.yaml -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller/config
+running install_egg_info
+Copying ../build/dumme_controller/dumme_controller.egg-info to /home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/python3.10/site-packages/dumme_controller-0.0.1-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/asambhav/Storage/dumme_sim/build/dumme_controller/install.log'

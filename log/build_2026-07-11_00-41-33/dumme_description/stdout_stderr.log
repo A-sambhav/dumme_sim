@@ -1,0 +1,27 @@
+-- Install configuration: ""
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/launch
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/launch/display.launch.py
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/meshes
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/meshes/wrist.STL
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/meshes/shoulder.STL
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/meshes/shoulder_rotation_plate.STL
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/meshes/base.STL
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/meshes/elbow.STL
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/urdf
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/urdf/dumme_description.urdf.xacro
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/rviz
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/ament_index/resource_index/package_run_dependencies/dumme_description
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/ament_index/resource_index/parent_prefix_path/dumme_description
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/environment/ament_prefix_path.sh
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/environment/path.sh
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/environment/path.dsv
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/local_setup.bash
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/local_setup.sh
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/local_setup.zsh
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/local_setup.dsv
+-- Installing: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/package.dsv
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/ament_index/resource_index/packages/dumme_description
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/cmake/dumme_descriptionConfig.cmake
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/cmake/dumme_descriptionConfig-version.cmake
+-- Up-to-date: /home/asambhav/Storage/dumme_sim/install/dumme_description/share/dumme_description/package.xml

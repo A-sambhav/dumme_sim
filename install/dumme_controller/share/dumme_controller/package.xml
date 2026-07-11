@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="3">
+
+  <name>dumme_controller</name>
+  <version>0.0.1</version>
+
+  <description>
+    Controller package for the Dumm-E robotic arm.
+  </description>
+
+  <maintainer email="sambhava06@gmail.com">asambhav</maintainer>
+
+  <license>MIT</license>
+
+  <!-- Build Tool -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- ROS 2 -->
+  <depend>rclpy</depend>
+
+  <!-- Launch -->
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+
+  <!-- ros2_control -->
+  <depend>controller_manager</depend>
+  <depend>joint_state_broadcaster</depend>
+  <depend>joint_trajectory_controller</depend>
+
+  <!-- Utilities -->
+  <depend>xacro</depend>
+  <depend>yaml_cpp_vendor</depend>
+
+  <!-- Testing -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+
+</package>
