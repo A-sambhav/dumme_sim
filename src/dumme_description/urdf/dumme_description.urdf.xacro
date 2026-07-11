@@ -255,7 +255,7 @@
   <joint name="camera_mount_joint" type="fixed">
     <!-- Adjust this position -->
     <origin xyz="-2.2 0 6.6" rpy="0 0 0"/>
-    <parent link="base_joint"/>
+    <parent link="base"/>
     <child link="camera_mount"/>
   </joint>
 
