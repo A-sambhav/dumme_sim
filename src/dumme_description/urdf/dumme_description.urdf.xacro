@@ -87,7 +87,7 @@
         <limit
           lower="-3.14159"
           upper="3.14159"
-          effort="100"
+          effort="10000"
           velocity="1"/>
 
       </joint>
@@ -135,7 +135,7 @@
         <limit
           lower="-3.14159"
           upper="3.14159"
-          effort="100"
+          effort="10000"
           velocity="1"/>
 
       </joint>
@@ -183,7 +183,7 @@
         <limit
           lower="-3.14159"
           upper="3.14159"
-          effort="100"
+          effort="10000"
           velocity="1"/>
 
       </joint>
@@ -218,7 +218,7 @@
     <parent link="elbow"/>
     <child link="wrist"/>
     <axis xyz="0.47573 -0.87959 0.0026889"/>
-    <limit lower="-3.14159" upper="3.14159" effort="100" velocity="1"/>
+    <limit lower="-3.14159" upper="3.14159" effort="10000" velocity="1"/>
   </joint>
 
   <!-- ================= CAMERA MOUNT ================= -->

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "dumme_msgs__rs",
+		"source" : "/home/asambhav/Storage/dumme_sim/build/dumme_msgs/dumme_msgs__rs"
+	}
+}

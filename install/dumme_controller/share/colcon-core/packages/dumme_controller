@@ -1,1 +1,1 @@
-controller_manager:joint_state_broadcaster:joint_trajectory_controller:launch:launch_ros:rclpy:xacro:yaml_cpp_vendor
+controller_manager:dumme_description:joint_state_broadcaster:joint_state_publisher_gui:joint_trajectory_controller:launch:launch_ros:rclpy:robot_state_publisher:ros2launch:sensor_msgs:trajectory_msgs:xacro:yaml_cpp_vendor

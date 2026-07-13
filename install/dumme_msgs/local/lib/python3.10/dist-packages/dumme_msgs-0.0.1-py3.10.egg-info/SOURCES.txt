@@ -1,0 +1,9 @@
+setup.py
+dumme_msgs/__init__.py
+dumme_msgs.egg-info/PKG-INFO
+dumme_msgs.egg-info/SOURCES.txt
+dumme_msgs.egg-info/dependency_links.txt
+dumme_msgs.egg-info/top_level.txt
+dumme_msgs/srv/__init__.py
+dumme_msgs/srv/_euler_to_quaternion.py
+dumme_msgs/srv/_quaternion_to_euler.py

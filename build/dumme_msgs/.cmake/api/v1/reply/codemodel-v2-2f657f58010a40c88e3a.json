@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-19eaadce1b68dbe7d599.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "dumme_msgs__py",
+					"jsonFile" : "directory-dumme_msgs__py-0cdd27c14a373bae8ea8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/asambhav/Storage/dumme_sim/build/dumme_msgs/dumme_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "dumme_msgs__rs",
+					"jsonFile" : "directory-dumme_msgs__rs-aaffdd0439c8608c3d7e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/asambhav/Storage/dumme_sim/build/dumme_msgs/dumme_msgs__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "dumme_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_dumme_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_dumme_msgs_egg-d19af30e0f8050ddebba.json",
+					"name" : "ament_cmake_python_build_dumme_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_dumme_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_dumme_msgs-d5a402e293ae7df0f74b.json",
+					"name" : "ament_cmake_python_copy_dumme_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs-99bfc354c5f6e7009561.json",
+					"name" : "dumme_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__cpp-f72673456251a03b186a.json",
+					"name" : "dumme_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "dumme_msgs__py::@0e06a011910fd957eb97",
+					"jsonFile" : "target-dumme_msgs__py-0e828e9dd8d808d754a6.json",
+					"name" : "dumme_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_generator_c-32370cfed2fea1a9141d.json",
+					"name" : "dumme_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_generator_py-fc72057f28e475b3869e.json",
+					"name" : "dumme_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_c-e071968dbb765e2bd18d.json",
+					"name" : "dumme_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_c__pyext-356e0f15358631cfeccc.json",
+					"name" : "dumme_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_cpp-e0aab5558214cd78127e.json",
+					"name" : "dumme_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_fastrtps_c-5d5c5163bbb8a78db4a8.json",
+					"name" : "dumme_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_fastrtps_c__pyext-08b52c9f7a6b9eb1b4ee.json",
+					"name" : "dumme_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_fastrtps_cpp-189ddfdd46661fdf12ba.json",
+					"name" : "dumme_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_introspection_c-9ee46a32beb8f932a574.json",
+					"name" : "dumme_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_introspection_c__pyext-4a9b9989ef4f7c4abb28.json",
+					"name" : "dumme_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs__rosidl_typesupport_introspection_cpp-fbe3eaf9d564e5ecfe08.json",
+					"name" : "dumme_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "dumme_msgs__rs::@a72396ea3fc4749cb09f",
+					"jsonFile" : "target-dumme_msgs__rs-70751c6c0010e7120beb.json",
+					"name" : "dumme_msgs__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dumme_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dumme_msgs_uninstall-ee0b32489a9c2a45efa0.json",
+					"name" : "dumme_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-6fee7675e2c81ca35240.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/asambhav/Storage/dumme_sim/build/dumme_msgs",
+		"source" : "/home/asambhav/Storage/dumme_sim/src/dumme_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

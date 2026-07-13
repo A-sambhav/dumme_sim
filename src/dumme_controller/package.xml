@@ -19,10 +19,13 @@
 
   <!-- ROS 2 -->
   <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>trajectory_msgs</depend>
 
   <!-- Launch -->
   <depend>launch</depend>
   <depend>launch_ros</depend>
+  <exec_depend>ros2launch</exec_depend>
 
   <!-- ros2_control -->
   <depend>controller_manager</depend>
@@ -32,6 +35,11 @@
   <!-- Utilities -->
   <depend>xacro</depend>
   <depend>yaml_cpp_vendor</depend>
+
+  <!-- Runtime companions -->
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>dumme_description</exec_depend>
 
   <!-- Testing -->
   <test_depend>ament_copyright</test_depend>

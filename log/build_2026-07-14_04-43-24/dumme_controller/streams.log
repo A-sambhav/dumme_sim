@@ -1,0 +1,28 @@
+[0.437s] Invoking command in '/home/asambhav/Storage/dumme_sim/src/dumme_controller': CMAKE_PREFIX_PATH=/home/asambhav/Storage/dumme_sim/install/dumme_description:/home/asambhav/Storage/dumme_sim/install/dumme_moveit:/home/asambhav/Storage/dumme_sim/install/dumme_utils:/home/asambhav/Storage/dumme_sim/install/dumme_msgs:/home/asambhav/e-yantra_ws/install/ur_simulation_gz:/home/asambhav/e-yantra_ws/install/ur_description:/home/asambhav/e-yantra_ws/install/ur5_control:/home/asambhav/e-yantra_ws/install/pymoveit2:/home/asambhav/e-yantra_ws/install/linkattacher_msgs:/home/asambhav/e-yantra_ws/install/eyantra_warehouse:/home/asambhav/e-yantra_ws/install/ebot_description PYTHONPATH=/home/asambhav/Storage/dumme_sim/build/dumme_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dumme_controller build --build-base /home/asambhav/Storage/dumme_sim/build/dumme_controller/build install --record /home/asambhav/Storage/dumme_sim/build/dumme_controller/install.log --install-scripts $base/lib/dumme_controller --single-version-externally-managed install_data
+[0.597s] running egg_info
+[0.606s] writing ../../build/dumme_controller/dumme_controller.egg-info/PKG-INFO
+[0.607s] writing dependency_links to ../../build/dumme_controller/dumme_controller.egg-info/dependency_links.txt
+[0.607s] writing entry points to ../../build/dumme_controller/dumme_controller.egg-info/entry_points.txt
+[0.607s] writing requirements to ../../build/dumme_controller/dumme_controller.egg-info/requires.txt
+[0.607s] writing top-level names to ../../build/dumme_controller/dumme_controller.egg-info/top_level.txt
+[0.627s] reading manifest file '../../build/dumme_controller/dumme_controller.egg-info/SOURCES.txt'
+[0.629s] writing manifest file '../../build/dumme_controller/dumme_controller.egg-info/SOURCES.txt'
+[0.629s] running build
+[0.629s] running build_py
+[0.629s] copying dumme_controller/slider_control.py -> /home/asambhav/Storage/dumme_sim/build/dumme_controller/build/lib/dumme_controller
+[0.629s] copying dumme_controller/__init__.py -> /home/asambhav/Storage/dumme_sim/build/dumme_controller/build/lib/dumme_controller
+[0.629s] running install
+[0.632s] running install_lib
+[0.642s] running install_data
+[0.643s] copying resource/dumme_controller -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/ament_index/resource_index/packages
+[0.643s] copying package.xml -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller
+[0.643s] copying launch/controller.launch.py -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller/launch
+[0.643s] copying launch/slider_controller.launch.py -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller/launch
+[0.643s] copying config/dumme_controllers.yaml -> /home/asambhav/Storage/dumme_sim/install/dumme_controller/share/dumme_controller/config
+[0.643s] running install_egg_info
+[0.653s] removing '/home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/python3.10/site-packages/dumme_controller-0.0.1-py3.10.egg-info' (and everything under it)
+[0.653s] Copying ../../build/dumme_controller/dumme_controller.egg-info to /home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/python3.10/site-packages/dumme_controller-0.0.1-py3.10.egg-info
+[0.654s] running install_scripts
+[0.674s] Installing slider_control script to /home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/dumme_controller
+[0.674s] writing list of installed files to '/home/asambhav/Storage/dumme_sim/build/dumme_controller/install.log'
+[0.690s] Invoked command in '/home/asambhav/Storage/dumme_sim/src/dumme_controller' returned '0': CMAKE_PREFIX_PATH=/home/asambhav/Storage/dumme_sim/install/dumme_description:/home/asambhav/Storage/dumme_sim/install/dumme_moveit:/home/asambhav/Storage/dumme_sim/install/dumme_utils:/home/asambhav/Storage/dumme_sim/install/dumme_msgs:/home/asambhav/e-yantra_ws/install/ur_simulation_gz:/home/asambhav/e-yantra_ws/install/ur_description:/home/asambhav/e-yantra_ws/install/ur5_control:/home/asambhav/e-yantra_ws/install/pymoveit2:/home/asambhav/e-yantra_ws/install/linkattacher_msgs:/home/asambhav/e-yantra_ws/install/eyantra_warehouse:/home/asambhav/e-yantra_ws/install/ebot_description PYTHONPATH=/home/asambhav/Storage/dumme_sim/build/dumme_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/asambhav/Storage/dumme_sim/install/dumme_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dumme_controller build --build-base /home/asambhav/Storage/dumme_sim/build/dumme_controller/build install --record /home/asambhav/Storage/dumme_sim/build/dumme_controller/install.log --install-scripts $base/lib/dumme_controller --single-version-externally-managed install_data

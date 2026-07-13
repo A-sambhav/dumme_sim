@@ -41,6 +41,7 @@ setup(
         'console_scripts': [
             # Add controller nodes here later
             # 'controller_node = dumme_controller.controller_node:main',
+            'slider_control = dumme_controller.slider_control:main',
         ],
     },
 )
