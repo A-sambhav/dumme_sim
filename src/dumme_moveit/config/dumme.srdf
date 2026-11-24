@@ -27,8 +27,7 @@
     <end_effector name="wrist_ee" parent_link="wrist" group="arm"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="base" link2="shoulder_rotation_plate" reason="Adjacent"/>
-    <disable_collisions link1="base" link2="camera_mount" reason="Adjacent"/>
-    <disable_collisions link1="camera_mount" link2="rgb_camera" reason="Adjacent"/>
+    <disable_collisions link1="wrist" link2="rgb_camera" reason="Adjacent"/>
     <disable_collisions link1="shoulder_rotation_plate" link2="shoulder" reason="Adjacent"/>
     <disable_collisions link1="shoulder" link2="elbow" reason="Adjacent"/>
     <disable_collisions link1="elbow" link2="wrist" reason="Adjacent"/>
