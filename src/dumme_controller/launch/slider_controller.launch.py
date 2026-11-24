@@ -32,7 +32,7 @@ def generate_launch_description():
 
     slider_control_node = Node(
         package="dumme_controller",
-        executable="slider_control",
+        executable="slider_control.py",
     )
 
     return LaunchDescription(

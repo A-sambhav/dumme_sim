@@ -1,22 +1,17 @@
 #include "dumme_controller/dumme_interface.hpp"
 #include <hardware_interface/types/hardware_interface_type_values.hpp>
 #include <pluginlib/class_list_macros.hpp>
+#include <algorithm>
 
 
 namespace dumme_controller
 {
 
-std::string compensateZeros(const int value)
+std::string servoCommand(const char joint, int degrees)
 {
-  std::string compensate_zeros = "";
-  if(value < 10){
-    compensate_zeros = "00";
-  } else if(value < 100){
-    compensate_zeros = "0";
-  } else {
-    compensate_zeros = "";
-  }
-  return compensate_zeros;
+  degrees = std::clamp(degrees, 0, 180);
+  std::string value = std::to_string(degrees);
+  return std::string(1, joint) + std::string(3 - value.size(), '0') + value + ",";
 }
 
 DummeInterface::DummeInterface()
@@ -59,9 +54,9 @@ CallbackReturn DummeInterface::on_init(const hardware_interface::HardwareInfo &h
     return CallbackReturn::FAILURE;
   }
 
-  position_commands_.reserve(info_.joints.size());
-  position_states_.reserve(info_.joints.size());
-  prev_position_commands_.reserve(info_.joints.size());
+  position_commands_.resize(info_.joints.size(), 0.0);
+  position_states_.resize(info_.joints.size(), 0.0);
+  prev_position_commands_.resize(info_.joints.size(), 0.0);
 
   return CallbackReturn::SUCCESS;
 }
@@ -104,9 +99,9 @@ CallbackReturn DummeInterface::on_activate(const rclcpp_lifecycle::State &previo
 
   // Reset commands and states - order matches dumme_ros2_control.xacro:
   // [0] shoulder_rotation_plate_joint, [1] shoulder_joint, [2] elbow_joint, [3] wrist_joint
-  position_commands_ = { 0.0, 0.0, 0.0, 0.0 };
-  prev_position_commands_ = { 0.0, 0.0, 0.0, 0.0 };
-  position_states_ = { 0.0, 0.0, 0.0, 0.0 };
+  std::fill(position_commands_.begin(), position_commands_.end(), 0.0);
+  std::fill(prev_position_commands_.begin(), prev_position_commands_.end(), 0.0);
+  std::fill(position_states_.begin(), position_states_.end(), 0.0);
 
   try
   {
@@ -182,28 +177,16 @@ hardware_interface::return_type DummeInterface::write(const rclcpp::Time &time,
   std::string msg;
 
   int plate = static_cast<int>(((position_commands_.at(0) + (M_PI / 2)) * 180) / M_PI);
-  msg.append("p");
-  msg.append(compensateZeros(plate));
-  msg.append(std::to_string(plate));
-  msg.append(",");
+  msg.append(servoCommand('p', plate));
 
   int shoulder = static_cast<int>(((position_commands_.at(1) + (M_PI / 2)) * 180) / M_PI);
-  msg.append("s");
-  msg.append(compensateZeros(shoulder));
-  msg.append(std::to_string(shoulder));
-  msg.append(",");
+  msg.append(servoCommand('s', shoulder));
 
   int elbow = static_cast<int>(((position_commands_.at(2) + (M_PI / 2)) * 180) / M_PI);
-  msg.append("e");
-  msg.append(compensateZeros(elbow));
-  msg.append(std::to_string(elbow));
-  msg.append(",");
+  msg.append(servoCommand('e', elbow));
 
   int wrist = static_cast<int>(((position_commands_.at(3) + (M_PI / 2)) * 180) / M_PI);
-  msg.append("w");
-  msg.append(compensateZeros(wrist));
-  msg.append(std::to_string(wrist));
-  msg.append(",");
+  msg.append(servoCommand('w', wrist));
 
   try
   {

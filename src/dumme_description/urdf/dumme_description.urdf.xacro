@@ -6,6 +6,9 @@
   <xacro:include filename="$(find dumme_description)/urdf/dumme_gazebo.xacro"/>
 
   <link name="world"/>
+  <material name="blue">
+    <color rgba="0 0 1 1"/>
+  </material>
   <!-- ================= BASE ================= -->
 
       <link name="base">

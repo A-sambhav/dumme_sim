@@ -24,6 +24,7 @@ class TaskServer(Node):
         self.get_logger().info(
             "Received goal request with id %d" % goal_handle.request.task_number
         )
+        result = DummeTask.Result()
 
         arm_state = RobotState(self.dumme.get_robot_model())
 
@@ -36,7 +37,9 @@ class TaskServer(Node):
             arm_joint_goal = np.array([-1.57, 0.0, -0.9, 0.0])
         else:
             self.get_logger().error("Invalid Task Number")
-            return
+            result.success = False
+            goal_handle.abort()
+            return result
 
         arm_state.set_joint_group_positions("arm", arm_joint_goal)
 
@@ -50,10 +53,12 @@ class TaskServer(Node):
             self.dumme.execute(arm_plan_result.trajectory, controllers=[])
         else:
             self.get_logger().info("Planner failed!")
+            result.success = False
+            goal_handle.abort()
+            return result
 
         self.get_logger().info("Goal succeeded")
         goal_handle.succeed()
-        result = DummeTask.Result()
         result.success = True
         return result
 

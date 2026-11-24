@@ -11,7 +11,7 @@ find_package(hardware_interface REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(rclcpp_lifecycle REQUIRED)
 find_package(PkgConfig)
-pkg_check_modules(SERIAL libserial)
+pkg_check_modules(SERIAL REQUIRED libserial)
 
 add_library(${PROJECT_NAME} SHARED
   src/dumme_interface.cpp
@@ -39,7 +39,7 @@ install(
 )
 
 install(
-  DIRECTORY include
+  DIRECTORY include/
   DESTINATION include
 )
 

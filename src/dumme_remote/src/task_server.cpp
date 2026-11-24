@@ -43,8 +43,10 @@ private:
   {
     (void)goal_handle;
     RCLCPP_INFO(get_logger(), "Received request to cancel goal");
-    auto arm_move_group = moveit::planning_interface::MoveGroupInterface(shared_from_this(), "arm");
-    arm_move_group.stop();
+    if (arm_move_group)
+    {
+      arm_move_group->stop();
+    }
     return rclcpp_action::CancelResponse::ACCEPT;
   }
 
@@ -81,6 +83,8 @@ private:
     else
     {
       RCLCPP_ERROR(get_logger(), "Invalid Task Number");
+      result->success = false;
+      goal_handle->abort(result);
       return;
     }
 
@@ -91,6 +95,8 @@ private:
     {
       RCLCPP_WARN(get_logger(),
                   "Target joint position(s) were outside of limits, but we will plan and clamp to the limits ");
+      result->success = false;
+      goal_handle->abort(result);
       return;
     }
 
@@ -105,6 +111,8 @@ private:
     else
     {
       RCLCPP_ERROR(get_logger(), "Planner failed!");
+      result->success = false;
+      goal_handle->abort(result);
       return;
     }
 

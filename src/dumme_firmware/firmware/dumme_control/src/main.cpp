@@ -91,10 +91,7 @@ void reach_goal(Servo& motor, int goal)
 void reach_shoulder_goal(int goal)
 {
   goal = clamp_deg(goal);
-  int mirrored_goal = SHOULDER_MIRROR_INVERT ? clamp_deg(180 - goal) : goal;
-
   int start_l = shoulder_l.read();
-  int start_r = shoulder_r.read();
   int steps = abs(goal - start_l);
 
   for (int i = 0; i <= steps; i++)

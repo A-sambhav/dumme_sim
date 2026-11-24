@@ -47,19 +47,17 @@ def generate_launch_description():
         executable="joint_state_publisher_gui"
     )
 
+    rviz_config = os.path.join(
+        dumme_description_dir,
+        "rviz",
+        "display.rviz"
+    )
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
         name="rviz2",
         output="screen",
-        arguments=[
-            "-d",
-            os.path.join(
-                dumme_description_dir,
-                "rviz",
-                "display.rviz"
-            ),
-        ],
+        arguments=["-d", rviz_config] if os.path.isfile(rviz_config) else [],
     )
 
     return LaunchDescription([
