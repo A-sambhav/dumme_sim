@@ -47,6 +47,7 @@
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>joint_state_publisher_gui</exec_depend>
   <exec_depend>rqt_image_view</exec_depend>
+  <exec_depend>dumme_interaction</exec_depend>
   <exec_depend>dumme_description</exec_depend>
 
   <!-- Testing -->
