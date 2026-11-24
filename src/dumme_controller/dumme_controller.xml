@@ -1,0 +1,7 @@
+<library path="dumme_controller">
+  <class name="dumme_controller/DummeInterface" type="dumme_controller::DummeInterface" base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Hardware interface for Dumm-E's 5 MG995 servos (4 logical joints), talking to an ESP32 over serial.
+    </description>
+  </class>
+</library>

@@ -12,6 +12,8 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/EulerToQuaternion.srv"
   "srv/QuaternionToEuler.srv"
+  "action/DummeTask.action"
+  DEPENDENCIES action_msgs
 )
 
 ament_package()
