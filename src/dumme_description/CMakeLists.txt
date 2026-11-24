@@ -11,7 +11,7 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 install(
-  DIRECTORY launch meshes urdf rviz
+  DIRECTORY launch meshes models urdf rviz worlds
   DESTINATION share/${PROJECT_NAME}
 )
 if(BUILD_TESTING)

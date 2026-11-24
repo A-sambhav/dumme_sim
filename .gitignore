@@ -6,3 +6,6 @@ ml/spaghetti/data/
 ml/spaghetti/runs/
 *.pt
 !ml/spaghetti/models/*.pt
+ml/voice/models/
+ml/models/
+bambu-lab-a1-*

@@ -32,11 +32,25 @@ def generate_launch_description():
         description="Absolute path to robot URDF/Xacro file",
     )
 
+    world_arg = DeclareLaunchArgument(
+        name="world",
+        default_value=os.path.join(dumme_description, "worlds", "dumme_world.sdf"),
+        description="SDF world (default has the Bambu Lab A1 printer); 'empty.sdf' for none",
+    )
+
+    # package share parent -> package:// meshes, <share>/models -> model://bambu_a1.
+    # Fortress reads IGN_GAZEBO_RESOURCE_PATH, Garden+ reads GZ_SIM_RESOURCE_PATH.
+    resource_path = os.pathsep.join(
+        [
+            str(Path(dumme_description).parent.resolve()),
+            os.path.join(dumme_description, "models"),
+        ]
+    )
     gazebo_resource_path = SetEnvironmentVariable(
-        name="GZ_SIM_RESOURCE_PATH",
-        value=[
-            str(Path(dumme_description).parent.resolve())
-        ],
+        name="GZ_SIM_RESOURCE_PATH", value=resource_path
+    )
+    ign_resource_path = SetEnvironmentVariable(
+        name="IGN_GAZEBO_RESOURCE_PATH", value=resource_path
     )
 
     ros_distro = os.environ["ROS_DISTRO"]
@@ -88,7 +102,9 @@ def generate_launch_description():
             (
                 "gz_args",
                 [
-                    " -v 4 -r empty.sdf ",
+                    " -v 4 -r ",
+                    LaunchConfiguration("world"),
+                    " ",
                     physics_engine,
                 ],
             )
@@ -121,7 +137,9 @@ def generate_launch_description():
     return LaunchDescription(
         [
             model_arg,
+            world_arg,
             gazebo_resource_path,
+            ign_resource_path,
             robot_state_publisher_node,
             gazebo,
             gz_spawn_entity,

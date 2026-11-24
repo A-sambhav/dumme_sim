@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<!-- empty.sdf from Ignition Gazebo 6 plus the 3D printer. -->
+<sdf version="1.8">
+  <world name="dumme_world">
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin
+      filename="ignition-gazebo-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-contact-system"
+      name="gz::sim::systems::Contact">
+    </plugin>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Bambu Lab A1 in front of the arm. The arm's zero pose points along
+         ~28 deg (x 0.88, y 0.47); the printer sits 0.42 m out on that line with
+         its front (screen, -Y in the model) facing the arm: yaw = 28 - 90 deg. -->
+    <include>
+      <uri>model://bambu_a1</uri>
+      <name>printer</name>
+      <pose>0.371 0.197 0 0 0 -1.082</pose>
+    </include>
+
+    <!-- Failed print on the PEI plate (plate top is z=0.074 in the printer frame,
+         plate centre at y=-0.029). Delete this include for a clean bed. -->
+    <include>
+      <uri>model://spaghetti</uri>
+      <name>spaghetti</name>
+      <pose relative_to="printer">0.01 -0.03 0.074 0 0 0.4</pose>
+    </include>
+
+    <!-- A person ~1.3 m away, 40 deg right of +X (the printer is 28 deg left),
+         turned to face the arm. Drag them around in Gazebo to test tracking.
+         Fuel model, cached in ~/.ignition/fuel after the first download. -->
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Standing person</uri>
+      <name>person</name>
+      <static>true</static>
+      <pose>1.0 -0.84 0 0 0 -2.27</pose>
+    </include>
+
+  </world>
+</sdf>

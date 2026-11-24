@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<sdf version="1.8">
+  <model name="spaghetti">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry><mesh><uri>meshes/spaghetti.stl</uri></mesh></geometry>
+        <material>
+          <!-- orange PLA -->
+          <ambient>0.57 0.27 0.06 1</ambient>
+          <diffuse>0.95 0.45 0.1 1</diffuse>
+          <specular>0.3 0.3 0.3 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
