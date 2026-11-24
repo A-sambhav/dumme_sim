@@ -34,8 +34,8 @@
                 <hardware>
                     <plugin>dumme_controller/DummeInterface</plugin>
 
-                    <!-- Change this later if required -->
-                    <param name="port">/dev/ttyUSB0</param>
+                    <!-- ESP32 serial port: xacro arg "port" (controller.launch.py port:=...) -->
+                    <param name="port">$(arg port)</param>
 
                 </hardware>
 

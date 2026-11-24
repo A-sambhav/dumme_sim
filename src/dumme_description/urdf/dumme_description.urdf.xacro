@@ -2,6 +2,7 @@
 <robot name="dumme" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:arg name="is_sim" default="false"/>
   <xacro:arg name="is_ignition" default="true"/>
+  <xacro:arg name="port" default="/dev/ttyUSB0"/>  <!-- ESP32 serial port (real robot) -->
   <xacro:include filename="$(find dumme_description)/urdf/dumme_ros2_control.xacro"/>
   <xacro:include filename="$(find dumme_description)/urdf/dumme_gazebo.xacro"/>
 

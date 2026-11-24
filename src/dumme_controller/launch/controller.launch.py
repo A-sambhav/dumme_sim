@@ -21,6 +21,12 @@ def generate_launch_description():
         description="Set to false when running on real hardware",
     )
 
+    port_arg = DeclareLaunchArgument(
+        name="port",
+        default_value="/dev/ttyUSB0",
+        description="ESP32 serial port (real robot only), e.g. /dev/ttyUSB0 or /dev/ttyACM0",
+    )
+
     robot_description = ParameterValue(
         Command(
             [
@@ -31,6 +37,8 @@ def generate_launch_description():
                     "dumme_description.urdf.xacro",
                 ),
                 " is_sim:=False",
+                " port:=",
+                LaunchConfiguration("port"),
             ]
         ),
         value_type=str,
@@ -92,6 +100,7 @@ def generate_launch_description():
     return LaunchDescription(
         [
             is_sim_arg,
+            port_arg,
             robot_state_publisher_node,
             controller_manager_node,
             joint_state_broadcaster_spawner,

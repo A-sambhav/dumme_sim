@@ -63,6 +63,28 @@ curl -LO https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip && 
 
 `ml/models/yolov8n.pt` (COCO weights) is downloaded by ultralytics on first use.
 
+## Real robot with a Raspberry Pi Zero 2 W
+
+The Pi runs only the arm controller (it talks to the ESP32 over USB serial);
+the laptop runs detection, voice, recording and the behaviours. They talk over
+Wi-Fi, so both need the same `ROS_DOMAIN_ID` (e.g. `export ROS_DOMAIN_ID=7`
+in both shells) and a network that allows multicast.
+
+```bash
+# Pi (Ubuntu Server 22.04 64-bit, ROS 2 Humble ros-base, 1-2 GB swap)
+sudo apt install ros-humble-ros-base ros-humble-xacro ros-humble-robot-state-publisher \
+  ros-humble-ros2-control ros-humble-ros2-controllers libserial-dev
+colcon build --packages-select dumme_description dumme_controller
+ros2 launch dumme_controller pi.launch.py port:=/dev/ttyUSB0   # or /dev/ttyACM0
+
+# laptop
+ros2 launch dumme_interaction laptop.launch.py            # rviz:=True to see the arm
+```
+
+Power the servos from their own 5-6 V supply, not the Pi, with a common ground.
+The user on the Pi needs serial access: `sudo usermod -aG dialout $USER`, then
+log in again.
+
 ## Notes
 
 - The wrist camera is mounted on its side, so detectors rotate frames 90 deg
